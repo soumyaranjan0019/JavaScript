@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+
+        var num = prompt("Enter the value");
+        var i;
+        var j;
+        for(i=1; i<=num; i++){
+
+            for(j=0; j<i; j++){
+                
+                document.write("*");
+
+            }
+            document.write("<br>");
+        }
+
+        for(i=num; i>=1; i--){
+
+            for(j=0; j<i; j++){
+                
+                document.write("*");
+
+            }
+            document.write("<br>");
+        }
+
+    </script>
+
+<!-- <script>
+    var x = prompt("Enter the value");
+    let m;
+    let n;
+    let o;
+
+    for(m=1; m<=x; m++){
+        for(n=1; n<=x-m; n++){
+            document.write("&nbsp&nbsp");
+        };
+        for(o=1; o<=m; o++){
+            document.write("*");
+        };document.write("<br>");
+    };
+
+    for(m=x; m>=1; m--){
+        for(n=1; n<=x-m; n++){
+            document.write("&nbsp&nbsp");
+        };
+        for(o=1; o<=m; o++){
+            document.write("*");
+        };document.write("<br>");
+    };
+
+</script> -->
+
+<!-- Pyramid -->
+
+            <!-- <script>
+                        let n =  prompt("Enter the value");
+
+                        // Upside pyramid
+                        for (let i = 1; i <= n; i++) {
+                        // printing spaces
+                        for (let j = n; j > i; j--) {
+                            document.write("&nbsp&nbsp");
+                        }
+                        // printing star
+                        for (let k = 0; k < i * 2 - 1; k++) {
+                            document.write("*");
+                        }
+                        document.write("<br>");
+                        }
+                        // downside pyramid
+                        for (let i = 1; i <= n - 1; i++) {
+                        // printing spaces
+                        for (let j = 0; j < i; j++) {
+                            document.write("&nbsp&nbsp");
+                        }
+                        // printing star
+                        for (let k = (n - i) * 2 - 1; k > 0; k--) {
+                            document.write("*");
+                        }
+                        document.write("<br>");
+                        }
+            </script> -->
+
+            <script>
+                function Hello(c,d){
+                    document.write(c+d +  "<br>");
+                }
+                Hello(3,43);
+                Hello(3,4);
+                Hello(3,13);
+                Hello(9,43);
+            </script>
+
+            <script>
+                var str = "JavaScript is a great language";
+ 		var a = str.length;
+ 		document.write(a);
+
+	     var str = "JavaScript is a great language";
+ 		var a = str.toLowerCase();
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great language";
+ 		var a = str.toUpperCase();
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great language";
+ 		var a = str.includes("Great");
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great language";
+ 		var a = str.startsWith("JavaScript");
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great language";
+ 		var a = str.endsWith("language");
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great language";
+ 		var a = str.search("great");
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great is language";
+ 		var a = str.match(/is/g);
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great is language";
+ 		var a = str.indexOf("is");
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great is language";
+ 		var a = str.lastIndexOf("is");
+ 		document.write(a + "<br>");
+
+ 		var str = "JavaScript is a great language";
+ 		var a = str.replace(/is/g, "are");
+ 		document.write(a + "<br>");
+
+ 		var str = "     JavaScript is a great language      ";
+ 		var a = str.trim();
+ 		//document.write(a + "<br>");
+ 		alert(a);
+            </script>
+
+
+</body>
+</html>

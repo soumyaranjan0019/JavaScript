@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+<body>       
+   
+<!--     
+    <script>
+        // Pallindrome Number
+
+            var num = prompt("Please enter your num");
+            var org=num;
+            //   document.write(org);
+            var reverse=0;
+            while(num!=0)
+            {
+                reverse=(reverse*10)+(num%10);
+                num=parseInt(num/10);
+            }
+            if(reverse==org)
+            {
+                document.write(org + " " + "is a pallindrome" + "<br>" + "<br>");
+            }
+            else
+            {
+                document.write(org + " " + " is not a pallindrome" + "<br>" + "<br>");
+            }
+   </script>
+
+<script>
+    // PERFECT NUMBER
+
+            var num = prompt ("Enter the value");
+            var sum;
+            for(var p=1; p<num; p++){
+                sum=0;
+                for(q=1; q<p; q++){
+                    if(p%q==0){
+                        sum+=q;
+                        
+                    }
+                }
+                if(sum==p){
+                    document.write(p + "<br>");
+                }
+            }
+
+            document.write("<br>" + "<br>");
+
+ </script>
+
+<script>
+    // Prime Number
+     var x = 0;
+     var count=0;
+     var y;
+
+
+    for (var prime = 2; prime <= 100; prime++)
+    {
+
+        var notPrime = false;
+        for (var z = 2; z <= prime; z++) {
+            if (prime % z===0 && z!==prime) {
+                notPrime = true;
+            }
+        }
+        if (notPrime === false) {
+            document.write(prime + "<br>");
+        }  
+    }
+        document.write("<br>");
+       
+</script>
+
+<script>
+    // Largest Number
+    
+    function findLargestNumber(arr) {
+            let largest = arr[0];
+                        
+            for (let i = 0; i < arr.length; i++) { 
+                if (arr[i] > largest) {
+                largest = arr[i];
+                }
+            }
+            
+            return largest;
+            }
+            let numbers = [10, 8, 2, 6, 1, 9, 4];
+            let largestNumber = findLargestNumber(numbers);
+            document.write("The largest no is : "+largestNumber);
+            
+</script> -->
+
+<script>
+    // Smallest Number
+    
+    function smallval(number) {
+            let small = number[0];
+            // document.write (small) ;                       
+            for (let i = 0; i < number.length; i++) { 
+                if (number[i] < small) {
+                    small = number[i];
+                }
+            }
+            
+            return small;
+            }
+            let number = [10, 8, 2, 6, 1, 9, 4];
+            let smallv = smallval(number);
+            document.write("The smallv no is : "+smallv);
+            
+</script>
+
+<script>
+     // Smallest Number 2nd
+
+    const  arr=[10,3,3,5,6,7,1];
+        const small=(arr)=>
+        {
+            let smallnum=Number.POSITIVE_INFINITY;
+                        console.log(smallnum);
+            for(const num of arr)
+            {
+                if(num < smallnum)
+                smallnum=num;
+
+            }
+            return smallnum;
+        }
+        
+        console.log(small(arr));
+    </script>
+</body>
+ </html>

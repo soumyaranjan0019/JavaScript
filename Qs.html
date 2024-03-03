@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//       Write a JavaScript function to check whether an 'input' is a string or not.
+//       Write a JavaScript function to check whether a string is blank or not.
+//       Write a JavaScript function to extract a specified number of characters from a string.
+
+    // 1)
+
+        function input(a){
+            document.write("1)" + " " + typeof a + "<br>");
+        }
+        input("Compound");
+
+
+     //  2) 
+
+    const str = "";
+
+            if (typeof str === 'string' && str.length === 0) {
+            document.write("2)" + " " +  'The string is empty' + "<br>");
+            } else {
+                document.write("2)" + " " +  'The string is NOT empty' + "<br>")
+            }
+
+
+    //  3) 
+
+    var s = "SRS";
+    var r = s.match(/R/g).length;
+    document.write("3)" + " " +  r + "<br>");
+
+ 
+    </script>
+</body>
+</html>

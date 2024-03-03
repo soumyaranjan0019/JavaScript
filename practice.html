@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <!-- <script>
+        var x = prompt("Enter the value");
+        var a;
+        var b;
+        for(a=1; a<=x; a++){
+            for(b=1; b<=a; b++){
+                document.write("*");
+            };
+            document.write("<br>");
+        };
+
+        for(a=x; a>=1; a--){
+            for(b=1; b<=a; b++){
+                document.write("*");
+            };
+            document.write("<br>");
+        };
+    </script>
+
+    <script>
+        let m;
+        let n;
+        let o;
+
+        for(m=1; m<=x; m++){
+            for(n=1; n<=x-m; n++){
+                document.write("&nbsp&nbsp");
+            };
+            for(o=1; o<=m; o++){
+                document.write("*");
+            };document.write("<br>");
+        };
+
+        for(m=x; m>=1; m--){
+            for(n=1; n<=x-m; n++){
+                document.write("&nbsp&nbsp");
+            };
+            for(o=1; o<=m; o++){
+                document.write("*");
+            };document.write("<br>");
+        };
+
+    </script> -->
+
+    <script>
+        var num = prompt("ETN");
+        var org = num;
+        var reverse = 0;
+        while(num!=0){
+            reverse=(reverse*10)+(num%10);
+            num = parseInt(num/10);
+        } 
+        if(reverse==org){
+            document.write(org + "is a PN");
+        }
+    </script>
+</body>
+</html>

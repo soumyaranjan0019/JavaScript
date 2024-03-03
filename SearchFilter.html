@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Live</title>
+
+    <style>
+        
+#the-filter {
+  background-color: rgb(159, 247, 247);
+  width: 60%;
+  margin-left: 16rem;
+  margin-top: 1rem;
+  padding: 27px;
+  border-radius: 3rem;
+  
+}
+#the-filter:hover
+{
+  background-color: rgb(39, 229, 14);
+  display: block;
+ 
+}
+#the-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#the-list li {
+  padding: 10px;
+  border-bottom: 2px solid #ffe9e9;
+  /* display: none; */
+  /* position: absolute; */
+}
+#the-list li:hover { 
+    background: #fffed6;
+    
+}
+#the-list li.hide {
+     display: none;
+
+    }
+::placeholder{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(23, 83, 56);
+}
+    </style>
+
+</head>
+<body>
+<input type="text" id="the-filter" placeholder="Search Here...">
+
+<ul id="the-list">
+  <li>Apple</li>
+  <li>Apricots</li>
+  <li>Avocado</li>
+  <li>Banana</li>
+  <li>Blackberries</li>
+  <li>Blueberries</li>
+  <li>Cherries</li>
+  <li>Durian</li>
+  <li>Elderberries</li>
+  <li>Guava</li>
+  <li>Honeydew</li>
+  <li>Jackfruit</li>
+  <li>Longan</li>
+  <li>Loquat</li>
+  <li>Mango</li>
+  <li>Orange</li>
+  <li>Pear</li>
+  <li>Pineapple</li>
+  <li>Strawberries</li>
+  <li>Watermelon</li>
+</ul>
+
+ <script>
+    window.addEventListener("load", () => {
+  // (A) GET HTML ELEMENTS
+  var filter = document.getElementById("the-filter"), // search box
+      list = document.querySelectorAll("#the-list li"); // all list items
+ 
+  // (B) ATTACH KEY UP LISTENER TO SEARCH BOX
+  filter.onkeyup = () => {
+    // (B1) GET CURRENT SEARCH TERM
+    let search = filter.value.toLowerCase();
+ 
+    // (B2) LOOP THROUGH LIST ITEMS - ONLY SHOW THOSE THAT MATCH SEARCH
+    for (let i of list) {
+      let item = i.innerHTML.toLowerCase();
+      if (item.indexOf(search) == -1) { i.classList.add("hide"); }
+      else { i.classList.remove("hide"); }
+    }
+  };
+});
+ </script>
+
+</body>
+</html>

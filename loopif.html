@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+
+    // (1) EVEN NO
+
+        // var a = 1;
+        // while(a<=100){
+        //     if(a % 2 == 0){
+        //         document.write(a + "<br>");     
+        //     }
+        //     a++;
+        // }
+        // document.write("<br>");
+
+    // (2) ODD NO
+    
+        //  var a = 1;
+        // while(a<=100){
+        //     if(a % 2 == 1){
+        //         document.write(a + "<br>");     
+        //     }
+        //     a++;
+        // }
+
+        // document.write("<br>");
+
+        // (5) Print 1 to 10
+
+        // var s = 1;
+        // while(s<=10){
+        //     document.write(s + "<br>");
+        //     s++;
+        // }
+
+        // document.write("<br>");
+    </script>
+
+    <script>
+
+        // (3) PRIME NO
+
+//         for (var prime = 2; prime <= 100; prime++) {
+
+//             var notPrime = true;
+//             for (var i = 2; i <= prime; i++) {
+//                 if (prime % i===0 && i!==prime) {
+//                     notPrime = false;
+//                 }
+//             }
+//             if (notPrime === true) {
+//                 document.write(prime + "<br>");
+//             }  
+
+                
+// }
+//             document.write("<br>");
+//             document.write("<br>");
+//             document.write("<br>");
+
+    </script>
+
+    <script>
+
+        // CHECK WHETHER PRIME OR COMPOSITE
+
+        
+            var num = prompt("Enter the Number");
+            var j;
+            var count = 0;
+            
+                for(j=1; j<=num; j++)
+                {
+                    if(num % j == 0){
+                        count++;
+                    };
+                };
+            
+            if(count == 2){
+                document.write(num + " " + "is a prime number");
+            }else{
+                document.write(num + " " + "is a composite number");
+            };
+            
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+    </script>
+
+    <script>
+        // var x = 0;
+
+        // for(var y=2; y<=100; y++){
+        //     for(var z=2; z<y-1; z++){
+        //         if(y%z == 0){
+        //         x++;
+        //         } 
+        //         document.write(y + "<br>");
+        //     }
+            
+        // }
+        
+    </script>
+</body>
+</html>

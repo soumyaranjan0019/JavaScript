@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = 12;
+        var c = (++a) - (a++) + (++b);
+        document.write(c + "<br>");     
+                                            //   = 13
+
+        var a = 10;
+        var b = 12;
+        var c = (--b) - (a--) + (a++);
+        document.write(c + "<br>");
+
+                                                // = 10
+
+        var a = 10;
+        var b = 12;
+        var c = (a++) + (--b) + (++a);
+        document.write(c + "<br>" + "<br>" + "<br>");
+
+                                                // = 33
+                                                var x=3;
+                                                
+                                                x=x+5;
+                                                 x+=5;document.write(x);                                                </script>
+
+    <script >
+
+
+        //Type Operator
+
+        
+        var w = true;
+        document.write(typeof w + "<br>");
+
+        var q = false;
+        document.write(typeof q + "<br>");
+
+        var e = 34;
+        document.write(typeof e + "<br>");
+
+        var r = "45";
+        document.write(typeof r + "<br>");
+
+        var t = "fgh";
+        document.write(typeof t + "<br>");
+
+        var m;
+        document.write(typeof m + "<br>");
+
+        var p = {};
+        document.write(typeof p + "<br>");
+ 
+    </script>
+</body>
+</html>
