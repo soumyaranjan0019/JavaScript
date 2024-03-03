@@ -1,0 +1,291 @@
+var element;
+
+document.getElementById("header").addEventListener("click",abc);
+document.getElementById("header").addEventListener("click",function(){
+ this.style.border = "10px solid red";
+});
+
+function abc(){
+  document.getElementById("header").style.background = "green";
+}  
+
+
+document.querySelector("#inner").addEventListener("click",function(){
+ alert("Inner Div");
+},true);
+
+document.querySelector("#outer").addEventListener("click",function(){
+ alert("Outer Div");
+},true);
+
+
+document.getElementById("header").addEventListener("mouseleave",abc);
+document.getElementById("header").addEventListener("click",xyz);
+
+function abc(){
+ document.getElementById("header").style.background = "green";
+}
+
+function xyz(){
+ document.getElementById("header").removeEventListener("mouseleave",abc);
+}
+
+
+//67)
+
+document.getElementById("header").addEventListener("click",abc);
+
+function abc(){
+ //document.getElementById("header").classList.add("xyz","efg");
+
+ //document.getElementById("header").classList.remove("xyz");
+
+ //document.getElementById("header").classList.toggle("xyz");
+
+ //var a =  document.getElementById("header").classList.length;
+
+ //var a =  document.getElementById("header").classList.item(0);
+
+ var a =  document.getElementById("header").classList.contains("xyz");
+ console.log(a);
+ }
+
+
+ 68) Parent Element & Parent Node
+
+ document.getElementById("outer").parentElement.style.background = "orange";
+
+ document.getElementById("main").parentNode;
+
+
+ 69) Children & children Nodes
+
+
+document.getElementById("outer").children; (Children - Only target Tags)
+
+document.getElementById("inner").children;
+
+document.getElementById("inner").children[1].style.background = "pink";
+
+document.getElementById("inner").childNodes[3]; (childNodes take all including comments)
+
+
+70)
+
+document.getElementById("inner").firstElementChild;
+
+document.getElementById("inner").firstElementChild.innerHTML;
+
+document.getElementById("inner").lastElementChild.style.background = "pink";
+
+document.getElementById("outer").firstElementChild.style.background = "pink";
+
+document.getElementById("inner").firstChild;  (Targets all)
+
+
+71)
+
+document.getElementById("child-c").nextElementSibling;
+
+document.getElementById("child-c").previousElementSibling.style.background = "pink";
+
+document.getElementById("child-c").nextElementSibling.style.background = "black";
+
+document.getElementById("child-C").nextSibling; (takes all)
+
+72)
+
+document.createElement("p");
+
+document.createElement("h2");
+
+document.createTexttNode("This is just text");
+
+document.createComment("This is comment");
+
+73)
+
+var newElement = document.createElement("h2");
+
+var newText = document.createTextNode("This is just text");
+
+//var newText = document.createComment("This is just comment");
+
+newElement.appendChild(newText);
+
+document.getElementById("test").appendChild(newElement);
+
+console.log(newElement);
+
+
+
+var newElement = document.createElement("h2");
+
+var newText = document.createTextNode("This is just text");
+
+newElement.appendChild(newText);
+
+var target = document.getElementById("test");
+
+target.insertBefore(newElement,target.childNodes[0])
+
+
+74)
+
+//  insertAdjacentElement Method
+
+var newElement = document.createElement("h2");
+
+var newText = document.createTextNode("This is just element");
+
+newElement.appendChild(newText);
+
+var target = document.getElementById("test");
+
+target.insertAdjacentElement("afterbegin",newElement);
+
+
+//  insertAdjacentHTML Method
+
+var newElement = "<h2>This is just Html</h2>";
+
+var target = document.getElementById("test");
+
+target.insertAdjacentHTML("afterend",newElement);
+
+//  insertAdjacentText Method
+
+var newText = "<h2>This is just Text</h2>";
+
+var target = document.getElementById("test");
+
+target.insertAdjacentHTML("beforeend",newText);
+
+
+75)
+
+  JavaScript ReplaceChild
+
+/*var newElement = document.createElement("li");
+
+var newText = document.createTextNode("WOW new Text");
+
+newElement.appendChild(newText);
+
+var target = document.getElementById("list");
+
+var oldElement = target.children[0];*/
+
+//console.log(oldElement);
+
+//target.replaceChild(newElement,oldElement);
+
+
+
+/*JavaScript RemoveChild*/
+
+var target = document.getElementById("list");
+
+var oldElement = target.children[1];
+
+target.removeChild(oldElement);
+
+
+76)
+
+
+/* JavaScript CloneNode */
+
+var target = document.getElementById("list1").children[0];
+
+var copyElement = target.cloneNode(true);
+
+console.log(copyElement);
+
+
+document.getElementById("list2").appendChild(copyElement);
+
+document.getElementById("test").appendChild(copyElement);
+
+
+77)
+
+
+/* JavaScript Contains Method*/
+
+var parentElement = document.getElementById("test");
+
+var target = document.getElementById("abc");
+
+var find = parentElement.contains(target);
+
+console.log(find);
+
+
+78)
+
+/* JavaScript hasAttribute*/
+
+var target  = document.getElementById("test");
+
+var find = target.hasAttribute("class");
+
+console.log(find);
+
+
+/* JavaScript hasChildNodes*/
+
+var target  = document.getElementById("test");
+
+var find = target.hasChildNodes();
+
+console.log(find);
+
+79)
+
+var target1 = document.getElementById("list-1").firstElementChild;
+
+var target2 = document.getElementById("list-2").children[1];
+
+var equal = target1.isEqualNode(target2);
+
+console.log(equal);
+
+82)
+
+var a = 0;
+var id = setInterval(Anim,500);
+
+function Anim(){
+  a = a + 10;
+  if(a == 200){
+    clearInterval(id);
+  }else{
+    var target = document.getElementById("test");
+    //target.style.marginLeft = a + 'px';
+    target.style.width = a + 'px';
+  }
+}
+
+83)
+
+/* JavaScript setTimeout*/
+
+/*var id = setTimeout(Anim,5000);
+
+function Anim(){
+  var target = document.getElementById("test");
+  target.style.width = "500px";
+  //console.log("Hello");
+}*/
+
+var id = setTimeout(function(){
+  var target = document.getElementById("test");
+  target.style.width = "500px";
+},5000);
+
+
+/* JavaScript clearTimeout*/
+function stopAnimation(){
+  clearTimeout(id);
+}
